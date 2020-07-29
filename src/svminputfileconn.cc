@@ -162,7 +162,7 @@ namespace dd
 	std::unordered_map<int,double> vals;
 	int label;
 	read_svm_line(hline,vals,label);
-	if (train_lines > 0 && nlines < train_lines)
+	if (train_lines == 0 || (train_lines > 0 && nlines < train_lines))
 	  add_train_svmline(label,vals,nlines);
 	else
 	  {

@@ -2252,7 +2252,7 @@ namespace dd
 					       const std::unordered_map<int,double> &vals,
 					       const int &count)
   {
-    if (!_db)
+    if (!_db || !_train)
       {
 	SVMInputFileConn::add_test_svmline(label,vals,count);
 	return;
